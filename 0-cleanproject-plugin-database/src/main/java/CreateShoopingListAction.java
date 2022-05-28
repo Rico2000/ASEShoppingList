@@ -12,11 +12,9 @@ public class CreateShoopingListAction implements ActionInterface {
 		try {
 			Name shoppingListName = new Name(input);
 			shoppingListService = new ShoppingListService(new ShoppingListRepository());
-			if(shoppingListService.getShoppingListBy(shoppingListName) == null) {
-				shoppingListService.createShooppingList(shoppingListName);
-			}else{
-				throw new ShoppingListAlreadyExistException("ShoppingList: "+ shoppingListName+ "exestiert bereits");
-			}
+
+			shoppingListService.createShooppingList(shoppingListName);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

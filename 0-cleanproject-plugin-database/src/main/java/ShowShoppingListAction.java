@@ -18,7 +18,6 @@ public class ShowShoppingListAction implements ActionInterface {
 		CommandLineLogger.getInstance().log("Gib den Namen dieser Liste ein");
 		Scanner scanner = new Scanner(System.in);
 		String inputName = scanner.next();
-		// scanner.close();
 
 		try {
 			Name shoppingListName = new Name(inputName);
@@ -38,7 +37,7 @@ public class ShowShoppingListAction implements ActionInterface {
 				}
 				CommandLineLogger.getInstance().log(sb.toString());
 			}
-			CommandLineLogger.getInstance().log("Gesamtkosten: "+  gesamtkostem+ " �");
+			CommandLineLogger.getInstance().log("Gesamtkosten: "+  gesamtkostem+ " €");
 		} catch (IllegalNameException e) {
 			e.printStackTrace();
 		} catch (ShoppingListNotFoundException e) {

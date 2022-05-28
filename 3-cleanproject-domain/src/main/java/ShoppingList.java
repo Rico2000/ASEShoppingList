@@ -20,7 +20,7 @@ public class ShoppingList {
 
     public void addItem(ShoopingListItem shoopingListItem) throws ShoopingListItemAlreadyExistException {
 		for(ShoopingListItem item: itemList){
-			if(item.getItemName() == shoopingListItem.getItemName()){
+			if(item.getItemName().equals(shoopingListItem.getItemName())){
 				throw new ShoopingListItemAlreadyExistException("");
 			}
 		}
@@ -32,7 +32,7 @@ public class ShoppingList {
 
 	@Override
 	public String toString() {
-		return shoppingListUuid + "," + shoppingListName.toString();
+		return "Name: " + shoppingListName.toString();
 	}
 
 	public UUID getShoppingListUuid() {

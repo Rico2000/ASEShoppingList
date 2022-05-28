@@ -72,7 +72,6 @@ public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 		ShoppingList oldList = this.getShoppingListBy(shoopingList.getShoppingListName());
 		StringBuilder sb = new StringBuilder();
 		if (oldList == null) {
-
 			sb.append(shoopingList.getShoppingListUuid()).append(";").append(shoopingList.getShoppingListName())
 					.append("\n");
 			CSVWriter.writeLine(FILE_PATH_LIST, sb.toString());

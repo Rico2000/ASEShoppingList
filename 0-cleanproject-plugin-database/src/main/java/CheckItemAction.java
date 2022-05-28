@@ -14,7 +14,6 @@ public class CheckItemAction implements ActionInterface {
 		CommandLineLogger.getInstance().log("Welche Einkaufliste möchtest du auswählen");
 
 		String inputName = scanner.next();
-		// scanner.close();
 
 		try {
 			Name shoppingListName = new Name(inputName);
