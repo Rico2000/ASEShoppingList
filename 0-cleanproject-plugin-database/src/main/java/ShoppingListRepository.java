@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 	private static final String FILE_PATH_LIST = "data/shopplist.csv";
