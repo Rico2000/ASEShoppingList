@@ -10,7 +10,6 @@ public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 		List<String> fileContentList = CSVReader.readFile(FILE_PATH_LIST);
 		List<String> fileContentItem = CSVReader.readFile(FILE_PATH_ITEM);
 		ArrayList<ShoppingList> shoppingLists = new ArrayList<ShoppingList>();
-		ArrayList<ShoopingListItem> items = new ArrayList<ShoopingListItem>();
 		for (String row : fileContentList) {
 			String[] rowSplitted = row.split(";");
 			try {
@@ -86,7 +85,6 @@ public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 	}
 
 	private void saveItem(ShoopingListItem item, ShoppingList oldList) {
-		StringBuilder sb = new StringBuilder();
 		String newItemString = mapItemtoString(oldList.getShoppingListUuid(), item);
 
 		for (ShoopingListItem itemOldList : oldList.getItemList()) {
