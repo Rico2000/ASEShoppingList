@@ -1,5 +1,8 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AddItemToListAction implements ActionInterface {
 	public AddItemToListAction() {
@@ -19,7 +22,13 @@ public class AddItemToListAction implements ActionInterface {
 			Name shoppingListName = new Name(inputNameShoppingList);
 			Name itemName = new Name(inputNameItem);
 			Quantity itemQuantity;
-			List<String> matches = HelperFunctions.splidQuantityString(inputQuantityItem);
+			inputQuantityItem = inputQuantityItem.replaceAll("\\s+","");
+			List<String> matches = new ArrayList<String>();
+			Matcher m = Pattern.compile("([\\d.]+)|([^\\d.]+)").matcher(inputQuantityItem);
+			while (m.find()) {
+				matches.add(m.group());
+			}
+
 			try {
 				if (matches.size() == 2) {
 					itemQuantity = new Quantity(Float.parseFloat(matches.get(0)), matches.get(1));

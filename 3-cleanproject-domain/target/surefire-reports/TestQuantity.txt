@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: TestShoppingListService
+Test set: TestQuantity
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.255 s - in TestShoppingListService
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in TestQuantity

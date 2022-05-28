@@ -1,13 +1,12 @@
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\ShowShoppingListAction.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\CSVReader.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\CheckItemAction.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\AddItemToListAction.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\CSVWriter.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\ShoppingListRepository.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\Main.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\ActionInterface.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\ActionMenu.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\CommandLineLogger.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\CreateShoopingListAction.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\ShoppingListAlreadyExistException.java
-C:\Users\rraus\Documents\Git\AdvancedSoftwareEngineeringWG - Kopie\0-cleanproject-plugin-database\src\main\java\HelperFunctions.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\CSVWriter.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\CreateShoopingListAction.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\AddItemToListAction.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\CommandLineLogger.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\ShoppingListRepository.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\ActionMenu.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\ShowShoppingListAction.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\ActionInterface.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\CheckItemAction.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\CSVReader.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\Main.java
+C:\Users\rraus\Documents\Git\ASEShoppingList\0-cleanproject-plugin-database\src\main\java\ShoppingListAlreadyExistException.java

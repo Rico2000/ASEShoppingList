@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 	private static final String FILE_PATH_LIST = "data/shopplist.csv";
@@ -39,8 +41,14 @@ public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 				UUID uuidItem = UUID.fromString(rowSplitted[1]);
 				Name itemName = new Name(rowSplitted[2]);
 				String quantityAndUnit = rowSplitted[3];
+
 				String quanatityUnit;
-				List<String> allMatches = HelperFunctions.splidQuantityString(quantityAndUnit);
+				quantityAndUnit = quantityAndUnit.replaceAll("\\s+","");
+				List<String> allMatches = new ArrayList<String>();
+				Matcher m = Pattern.compile("([\\d.]+)|([^\\d.]+)").matcher(quantityAndUnit);
+				while (m.find()) {
+					allMatches.add(m.group());
+				}
 				Float quanatityNumber = Float.parseFloat(allMatches.get(0));
 				if (allMatches.size() > 1) {
 					quanatityUnit = allMatches.get(1);
