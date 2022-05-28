@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: TestShoppingListService
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec <<< FAILURE!
+TestShoppingListService.testGetShoppingListByName()  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "ShoppingListRepositiryInterface.save(ShoppingList)" because "TestShoppingListService.mock" is null
+	at TestShoppingListService.testGetShoppingListByName(TestShoppingListService.java:28)
+
+TestShoppingListService.testCreateShooppingList()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "ShoppingListService.createShooppingList(Name)" because "TestShoppingListService.service" is null
+	at TestShoppingListService.testCreateShooppingList(TestShoppingListService.java:20)
+
+TestShoppingListService.testGetShoppingListByNameNotFound()  Time elapsed: 0.007 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <ShoppingListNotFoundException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:65)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:37)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3082)
+	at TestShoppingListService.testGetShoppingListByNameNotFound(TestShoppingListService.java:35)
+Caused by: java.lang.NullPointerException: Cannot invoke "ShoppingListService.getShoppingListBy(Name)" because "TestShoppingListService.service" is null
+	at TestShoppingListService.lambda$testGetShoppingListByNameNotFound$0(TestShoppingListService.java:35)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:55)
+	... 21 more
+
+TestShoppingListService.testAddItemToList()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "ShoppingListRepositiryInterface.save(ShoppingList)" because "TestShoppingListService.mock" is null
+	at TestShoppingListService.testAddItemToList(TestShoppingListService.java:42)
+

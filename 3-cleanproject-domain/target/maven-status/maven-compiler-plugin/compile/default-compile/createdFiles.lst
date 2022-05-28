@@ -1,0 +1,11 @@
+IlleaglQuantityException.class
+ShoopingListItemAlreadyExistException.class
+ItemStatus.class
+ShoppingList.class
+IllegalUnitExeption.class
+ShoopingListItem.class
+IllegalNameException.class
+Money.class
+Name.class
+ShoppingListRepositiryInterface.class
+Quantity.class
