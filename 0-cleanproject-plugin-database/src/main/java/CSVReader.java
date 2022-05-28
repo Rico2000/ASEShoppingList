@@ -11,7 +11,7 @@ public class CSVReader {
 		List<String> content = new ArrayList<String>();
 
 		try {
-			Scanner rowScanner = new Scanner(new File(filePath));
+			Scanner rowScanner = new Scanner(new File(filePath), "UTF-8");
 			rowScanner.useDelimiter(CSV_LINE_SEPARATOR);
 			while (rowScanner.hasNext()) {
 				content.add(rowScanner.next());

@@ -16,7 +16,7 @@ public class ShowShoppingListAction implements ActionInterface {
 		}
 		CommandLineLogger.getInstance().log("Welche Einkaufsliste willst du anschauen?");
 		CommandLineLogger.getInstance().log("Gib den Namen dieser Liste ein");
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in,"UTF-8");
 		String inputName = scanner.next();
 
 		try {

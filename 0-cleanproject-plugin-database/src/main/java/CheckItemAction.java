@@ -6,7 +6,7 @@ public class CheckItemAction implements ActionInterface {
 	@Override
 	public void interact() {
 		ShoppingListService shoppingListService = new ShoppingListService(new ShoppingListRepository());
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in, "UTF-8");
 		List<ShoppingList> shoppingLists = shoppingListService.getAllShoppingLists();
 		for (ShoppingList list : shoppingLists) {
 			CommandLineLogger.getInstance().log(list.toString());

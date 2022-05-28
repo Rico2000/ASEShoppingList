@@ -8,8 +8,9 @@ public final class Name {
 		if (name.length() <= 2) {
 			throw new IllegalNameException("Name: "+ name+ " is to short");
         }
-		if (!name.matches("[a-zA-Z_?]*")) {
-			throw new IllegalNameException("Name: "+ name+ " contains Illegal Character");
+		if (!name.matches("[a-zA-ZäöüÄÖÜ]*")) {
+
+		throw new IllegalNameException("Name: "+ name+ " contains Illegal Character");
         }
 		
 	}

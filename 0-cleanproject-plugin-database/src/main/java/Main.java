@@ -1,11 +1,10 @@
 public class Main {
 
-	/*public static void main(String[] args) {
-		CommanLineLogger.log("Willkommen im WG-Planer");
-		new ActionMenu().interact();
-		
-	}*/
+
 	public static void main(String[] args) {
+		CommandLineLogger.getInstance().log(
+				"Willkommen zum Einkauflisten Planer für WG's.");
+
 		new ActionMenu().interact();
 	}
 

@@ -94,7 +94,8 @@ public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 
 			}
 		}
-		CSVWriter.writeLine(FILE_PATH_ITEM, newItemString);
+		CSVWriter.writeLine(FILE_PATH_ITEM, newItemString+"\n");
+
 	}
 
 	public ShoppingList getShoppingListBy(Name name) {

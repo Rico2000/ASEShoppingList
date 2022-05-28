@@ -7,7 +7,7 @@ public class AddItemToListAction implements ActionInterface {
 
 	public void interact() {
 		ShoppingListService shoppingListService = new ShoppingListService(new ShoppingListRepository());
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in, "UTF-8");
 		CommandLineLogger.getInstance().log("Zu Welcher Liste soll etwas hinzugefügt werden?");
 		String inputNameShoppingList = scanner.nextLine();
 		CommandLineLogger.getInstance().log("Weches Item soll hinzugefügt werden?");

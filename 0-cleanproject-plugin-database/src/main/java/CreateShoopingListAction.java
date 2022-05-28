@@ -5,8 +5,8 @@ public class CreateShoopingListAction implements ActionInterface {
 	}
 
 	public void interact() {
-		Scanner scanner = new Scanner(System.in);
-		CommandLineLogger.getInstance().log("Wie soll die Einkaufliste hei�en?");
+		Scanner scanner = new Scanner(System.in, "UTF-8");
+		CommandLineLogger.getInstance().log("Wie soll die Einkaufliste heißen?");
 		String input = scanner.next();
 		ShoppingListService shoppingListService;
 		try {
