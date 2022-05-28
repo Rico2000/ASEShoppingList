@@ -40,7 +40,7 @@ public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 				String quantityAndUnit = rowSplitted[3];
 
 				String quanatityUnit;
-				List<String> allMatches = HelperClass.getallMatches(quantityAndUnit);
+				List<String> allMatches = HelperClass.splitQuantityAndItemFromString(quantityAndUnit);
 				Float quanatityNumber = Float.parseFloat(allMatches.get(0));
 				if (allMatches.size() > 1) {
 					quanatityUnit = allMatches.get(1);

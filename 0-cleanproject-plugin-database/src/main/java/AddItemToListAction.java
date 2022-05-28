@@ -18,29 +18,32 @@ public class AddItemToListAction implements ActionInterface {
 		try {
 			Name shoppingListName = new Name(inputNameShoppingList);
 			Name itemName = new Name(inputNameItem);
-			List<String> matches = HelperClass.getallMatches(inputQuantityItem);
-			Quantity itemQuantity;
+			List<String> matches = HelperClass.splitQuantityAndItemFromString(inputQuantityItem);
+			Quantity itemQuantity = null;
 
-			try {
-				if (matches.size() == 2) {
-					itemQuantity = new Quantity(Float.parseFloat(matches.get(0)), matches.get(1));
-				} else {
-					itemQuantity = new Quantity(Float.parseFloat(matches.get(0)));
-				}
-				shoppingListService.addItemToList(shoppingListName, itemName, itemQuantity);
-			}
-			catch(Exception e) {
-				e.printStackTrace();
-			}
-
-		} catch (IllegalNameException e) {
-			e.printStackTrace();
-		} catch (NumberFormatException e) {
+			itemQuantity = getQuantityFromList(matches, itemQuantity);
+			shoppingListService.addItemToList(shoppingListName, itemName, itemQuantity);
+		} catch (NumberFormatException | ShoppingListNotFoundException | ShoopingListItemAlreadyExistException |
+				 IllegalNameException e) {
 			e.printStackTrace();
 		}
 
 	}
 
+	private Quantity getQuantityFromList(List<String> matches, Quantity itemQuantity) {
+		try {
+			if (matches.size() == 2) {
+				itemQuantity = new Quantity(Float.parseFloat(matches.get(0)), matches.get(1));
+			} else {
+				itemQuantity = new Quantity(Float.parseFloat(matches.get(0)));
+			}
+
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return itemQuantity;
+	}
 
 
 }
