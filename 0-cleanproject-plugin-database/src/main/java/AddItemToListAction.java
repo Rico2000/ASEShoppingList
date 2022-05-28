@@ -21,13 +21,8 @@ public class AddItemToListAction implements ActionInterface {
 		try {
 			Name shoppingListName = new Name(inputNameShoppingList);
 			Name itemName = new Name(inputNameItem);
+			List<String> matches = HelperClass.getallMatches(inputQuantityItem);
 			Quantity itemQuantity;
-			inputQuantityItem = inputQuantityItem.replaceAll("\\s+","");
-			List<String> matches = new ArrayList<String>();
-			Matcher m = Pattern.compile("([\\d.]+)|([^\\d.]+)").matcher(inputQuantityItem);
-			while (m.find()) {
-				matches.add(m.group());
-			}
 
 			try {
 				if (matches.size() == 2) {
@@ -48,5 +43,7 @@ public class AddItemToListAction implements ActionInterface {
 		}
 
 	}
+
+
 
 }

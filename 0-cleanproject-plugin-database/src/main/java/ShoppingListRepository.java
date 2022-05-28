@@ -43,12 +43,7 @@ public class ShoppingListRepository implements ShoppingListRepositiryInterface {
 				String quantityAndUnit = rowSplitted[3];
 
 				String quanatityUnit;
-				quantityAndUnit = quantityAndUnit.replaceAll("\\s+","");
-				List<String> allMatches = new ArrayList<String>();
-				Matcher m = Pattern.compile("([\\d.]+)|([^\\d.]+)").matcher(quantityAndUnit);
-				while (m.find()) {
-					allMatches.add(m.group());
-				}
+				List<String> allMatches = HelperClass.getallMatches(quantityAndUnit);
 				Float quanatityNumber = Float.parseFloat(allMatches.get(0));
 				if (allMatches.size() > 1) {
 					quanatityUnit = allMatches.get(1);
