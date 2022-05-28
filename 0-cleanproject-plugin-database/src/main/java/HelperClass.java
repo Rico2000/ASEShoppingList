@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public  class HelperClass {
-    public static List<String> splitQuantityAndItemFromString(String inputQuantityItem) {
+    public static List<String> splitQuantityAndUnitFromString(String inputQuantityItem) {
         inputQuantityItem = inputQuantityItem.replaceAll("\\s+","");
         List<String> matches = new ArrayList<String>();
         Matcher m = Pattern.compile("([\\d.]+)|([^\\d.]+)").matcher(inputQuantityItem);

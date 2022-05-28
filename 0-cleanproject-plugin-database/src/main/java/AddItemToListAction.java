@@ -18,7 +18,7 @@ public class AddItemToListAction implements ActionInterface {
 		try {
 			Name shoppingListName = new Name(inputNameShoppingList);
 			Name itemName = new Name(inputNameItem);
-			List<String> matches = HelperClass.splitQuantityAndItemFromString(inputQuantityItem);
+			List<String> matches = HelperClass.splitQuantityAndUnitFromString(inputQuantityItem);
 			Quantity itemQuantity = null;
 
 			itemQuantity = getQuantityFromList(matches, itemQuantity);
